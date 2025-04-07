@@ -1,0 +1,351 @@
+Class #1
+---------
+Agenda
+=====
+1- My Introduction - Karthik
+2- Why Java?
+3- History of Java.
+
+top 500 richest companies of world
+	Google
+	Meta
+	Microsoft
+	Infosys
+	Wipro etc.
+code -> pushed into git repo
+3 Billion Devices world wide.
+=================
+Class #2
+---------
+Agenda
+--------
+print "My First Java Program" -> using java program
+4 steps
+--------
+1- Write the Java Program
+	-> notepad++ (start -> search for notepad++)
+	-> language -> j -> java
+2- Save the Java Program
+	-> file -> save as -> <class_name>.java
+3- Compile the Java Program
+	-> cmd -> in the file location
+	-> javac <class_name>.java	
+	-> <class_name>.class file gets created
+4- Run the Java Program
+	-> java <class_name>
+	-> on comd prompt
+short brief
+------------
+1- class name should be self descriptive
+2- public -> to make sure that the method is accisible to other java classes including jvm
+3- static -> to make jvm call main method without java object.
+4- void -> id you do not have anything to return, use void return type.
+5- main() -> method name which is invoked by jvm
+6- String[] args -> if programmer wants to send any arguements to java program, he/she can use this args
+7- System.out.println() -> used to print text on console / terminal
+=================
+Class #3
+----------
+Agenda
+---------
+Printing various literals
+--------------------------
+what is a literal?
+-> in java, literal is a fixed value / a constant, that we can directly use in code.
+-> in java, there is no restriction on how many literals you can use in a class
+1- Printing various literals
+	a- String literals -> value written in double quotes ("")
+	b- integer literals -> number without decimal point -> 25, 55, 105
+	c- float literals -> number with decimal point ending with f -> 25.5f, 55.7f, 105.0f
+	d- char literals -> single value written in single quotes ('') -> a, y, @
+	e- boolean literals -> true / false
+2- printing combination of literals
+	a- arithmatic expressions -> (+,-,*,/,%)
+	b- boolean expressions -> expression evaluating to true / false
+	c- arithmatic expressions + String
+=================
+Class #4
+----------
+Agenda
+--------
+1- Java Data Types
+	a- primitive data types
+		1- byte
+		2- short
+		3- int ->generally, we use int in place of byte / short
+		4- long
+		5- float
+		6- double
+		7- boolean
+		8- char
+			byte < short < int < long
+			float < double
+	b- non-pirmitive data types
+		-> these are derived from primitive data types
+		-> String, ArrayList, HashMap, Employee etc.
+2- Java Variables
+	->water bottle example 
+	->variable acts as storage to the actual value
+
+byte b; // declaring variable
+b=10;  // assigning value
+short s = 300; // single line declaring and assigning
+			
+syntax
+-------
+<data_type> <variable_name> --> example : byte b; 
+<data_type> <variable_name> = <value> --> short s = 300;
+
+important points
+-------------------
+1- We can re-use variables in code any number of times.
+2- We can re-assign a variable in code any number of times.
+=================
+Class #5
+----------
+Agenda
+--------
+Variable Usage and Rules
+================
+1- Variable naming rules
+	a- Variable name should follow camel case (start with lower case and followed by capital letter at start of each word)
+		-> employee name --> employeeName
+		-> student address --> studentAddress
+		-> person date of birth --> personDateOfBirth
+	b- variable names can contain
+		-> letters, numbers and underscore (_)
+		-> can start with letter or underscore and not with number
+			-> employee1 	-> valid
+			-> 1employee 	-> invalid (cannot start with number)
+			-> _employee1 	-> valid
+			-> employee_1	-> valid
+2- Some important points about variables
+	a- any variable declared inside a method is a local variable.
+	b- variable should be declared before it is used.
+	c- local variable cannot be used before it is initialized.
+	d- more than 1 local vriable can be used in a method.
+	e- we can assing one variable to another.
+	f-  variable can be declared only once
+=================
+Class #6
+----------
+Agenda
+--------
+Internal working of java program & revision till date
+--------------------------------------------------------
+1- programer writes a .java file
+2- when we compile a .java file -> we get a .class file
+	a- programer cannot understand .class file
+3- .class file is understood by JVM (JVM is inside JRE. JRE is inside JDK. JDK is installed in our laptop)
+4- JVM will identify main method and starts execution from there.
+5- if there is System.out.println() -> we can see the output on the console.
+=================
+Class #7
+----------
+Agenda
+--------
+Methods in java
+-----------------
+1- What is a method? Why do we need methods?
+2- static method delcaration.
+3- static method usage.
+
+	public static void main(String[] args){
+		// method body
+	}
+
+syntax
+-------
+static method 
+---------------
+<access_modifier> static <return_type> <method_name> <args>
+{
+		// body
+}
+
+Public static void process(int id)
+{
+	// code to process
+}
+
+instance / non-static method
+-------------------------------
+<access_modifier> <return_type> <method_name> <args>
+{
+		// body
+}
+
+Public void process(int id)
+{
+	// code to process
+}
+
+1- if static keyword is present, then it is a static method.
+2- if static keyword is not present, then it is non-static method or instance method.
+3- static -> it belongs to class -> black board
+4- non-static -> it belongs to object or instance -> book, pen, shoe etc.
+5- every method should have return type. If you do not want to return anything, then use void.
+6- every method can have zero or more arguements.
+7- we should call the method to be executed
+8- inside the method, we can have code to call other methods also.
+9- 0 or more lines can be present in a method.
+10 - we can call static method in 2 ways:	
+	a- directly call using <method_name> 
+	b- call using <class_name>.<method_name>
+=================
+Class #8
+----------
+Agenda
+--------
+Static Variables in java
+-------------------------
+static is applicable to variables and methods
+static -> it belongs to class -> black board
+
+types of memory
+===========
+	1- Stack Memory - execution purpose - Ex. -> RAM 
+	2. Heap Memory - storage - Ex. -> Hard Disk
+Loading Operations
+============
+	1. Whenever we are running a particular class, the class is loaded into stack memory.
+	2. When a particular class is loading into stack memory, all static variables are loaded into stack memory.
+	3. When a particular class is loading into stack memory, all static variables are loaded into stack memory with default values.
+		a- byte		- 0
+		b- short		- 0
+		c- int		- 0
+		d- long		- 0
+		e- float		- 0.0
+		f-  double		- 0.0
+		e- boolean	- false
+		g- char		- ''
+	4. Once static variables are loaded with default values, then re-initialization happens from top to bottom.
+	5. When a particular class is loading into stack memory, all static methods are loaded into stack memory.
+	6. JVM will start executing main()
+
+Static Members(variables & methods)
+========================
+1- class members
+2- global members 
+3- universal members
+=================
+Class #9
+----------
+Agenda
+--------
+Static Initialization Block (SIB)
+---------------------------------
+{
+	// block
+}
+static -> it belongs to class -> black board
+
+// static block
+static
+{
+	// block
+	// contains initialization logic
+}
+
+1- Static Blocks are used to initialize globla variables (static variables).
+2- Static Blocks are executed when class is loaded into stack memory.
+3- SIBs are executed only once.
+4- We can have multiple SIBs in a class.
+5- SIBs are executed from top to bottom.
+6- SIBs can be placed anywhere in class.(recommendation is to place SIBs in the begining of class)
+7- SIBs are executed before main()
+8- JVM will start executing main()
+=================
+Class #10
+----------
+Agenda
+--------
+Multiple Classes part - 1
+===============
+1- purpose of multiple classes
+2- how to declare multiple classes
+3- how to access members of one class file from another class file.
+	members -> methods & variables
+---------------------
+1- class can be a part of .java file.
+2- .java file can have multiple
+	a. classes
+	b. interfaces
+	c. enums
+	d. abstract classes
+	e. annotations
+3- individual .class files will be generated for each of the above , when we compile a .java file
+4- we need to use a specific .class file to run and get it executed.
+5- How to access static members?
+	a- directly using their name (member name)
+	b- by using class name -> Syntax: <class_name>.<member_name>
+6- if we are accessing one static member that belongs to different class, then we can use 
+	<class_name>.<member_name>
+
+===================
+Class #11 #12 & #13 by Sashi Sir
+===================
+Class #14
+-----------
+Agenda
+=====
+IDE introduction (Intellij Idea)
+===================
+IDE -> Integrated Development Environment
+community edition -> free edition
+Jet Brains -> company owns Intellij Idea
+file -> new project -> MercyCoreJava_03_2025
+creating new java file -> file -> src -> rt click -> new java class
+main -> suggession for main method -> to use it, do double click
+sout -> suggession for System.out.println() -> to use it, do double click
+===================
+Class #15
+-----------
+Agenda
+=====
+Multiple Classes part - 1
+===============
+1- purpose of multiple classes
+2- how to declare multiple classes
+3- how to access members of one class file from another class file.
+	members -> methods & variables
+---------------------
+1- class can be a part of .java file.
+2- .java file can have multiple
+	a. classes
+	b. interfaces
+	c. enums
+	d. abstract classes
+	e. annotations
+3- individual .class files will be generated for each of the above , when we compile a .java file
+4- we need to use a specific .class file to run and get it executed.
+5- How to access static members?
+	a- directly using their name (member name)
+	b- by using class name -> Syntax: <class_name>.<member_name>
+6- if we are accessing one static member that belongs to different class, then we can use 
+	<class_name>.<member_name>
+===============
+Multiple classes Part - 2
+===============
+1- There should be only 1 public class in a java file. The name of the java file should be the same as public class name.
+2- ctrl+y -> short cut for delete the line.
+3- method calls should avoid unconditional call.
+	Exception in thread "main" java.lang.StackOverflowError
+4- method calls should avoid unconditional recursion.
+	Exception in thread "main" java.lang.StackOverflowError
+	recursion -> method calling itself.
+5- more than 1 static block can be present in a class
+6- static blocks can be present in any place of the class. but execution happens from top to bottom.
+7- SIBs are executed only once at the time of class loading.
+
+
+
+
+
+
+
+
+
+
+
+
