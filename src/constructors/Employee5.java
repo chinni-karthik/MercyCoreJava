@@ -20,6 +20,7 @@ public class Employee5 {
 
     // parameterized constructor
     // 'Employee5(int, int, String)' is already defined in 'constructors.Employee5'
+    // you get above error if salary is int
     public Employee5(int id, float salary, String name) {
         this.id = id;
         this.salary = salary;
@@ -32,6 +33,4 @@ public class Employee5 {
         this.id = id;
         this.name = name;
     }
-
-
 }
