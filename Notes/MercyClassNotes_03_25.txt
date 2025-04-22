@@ -337,7 +337,21 @@ Multiple classes Part - 2
 5- more than 1 static block can be present in a class
 6- static blocks can be present in any place of the class. but execution happens from top to bottom.
 7- SIBs are executed only once at the time of class loading.
-
+============================================================
+Class #24
+---------
+Agenda
+------
+More points about private access modifier
+-----------------------------------------
+1- private instance variables will not be inherited to subclass.
+2- private instance methods will not be inherited to subclass.
+3- we can access private constructor within same class.
+4- we cannot access private constructor from child class or a different class.
+5- if one constructor is private but others are not,
+    we can use the available constructors to create object.
+6- We cannot declare static block as private.
+7- We cannot declare instance block as private.
 
 
 
